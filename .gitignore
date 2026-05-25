@@ -1,0 +1,59 @@
+# ==========================================
+# 1. JAVA / SPRING BOOT (.gitignore cho apps/backend-spring)
+# ==========================================
+# Các file build và đóng gói
+**/target/
+**/.gradle/
+**/build/
+**/out/
+
+# File cấu hình của các IDE (IntelliJ, Eclipse)
+**/.idea/
+**/*.iml
+**/*.ipr
+**/*.iws
+**/.classpath
+**/.project
+**/.settings/
+**/bin/
+
+# File log hệ thống sinh ra khi chạy ứng dụng
+**/*.log
+
+# ==========================================
+# 2. NODE.JS / NESTJS (.gitignore cho apps/api-nestjs)
+# ==========================================
+# Thư mục chứa các dependency (Nặng nhất, tuyệt đối không push)
+**/node_modules/
+**/dist/
+
+# File lưu cache của npm/yarn/pnpm
+**/.npm
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/.pnpm-debug.log*
+
+# ==========================================
+# 3. TERRAFORM (.gitignore cho các thư mục terraform/)
+# ==========================================
+**/.terraform/
+
+# File quản lý trạng thái hạ tầng (CHỨA NHIỀU SECRET, TUYỆT ĐỐI KHÔNG PUSH)
+**/*.tfstate
+**/*.tfstate.*
+
+# Các file biến môi trường chứa token, password thực tế
+**/*.tfvars
+**/*.tfvars.json
+**/override.tf
+**/override.tf.json
+
+# File sinh ra khi chạy lệnh terraform plan (nếu có lưu ra file)
+**/*.tfplan
+
+# ==========================================
+# 4. HỆ ĐIỀU HÀNH & HỆ THỐNG
+# ==========================================
+.DS_Store
+Thumbs.db
