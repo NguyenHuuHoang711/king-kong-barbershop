@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  frontend:
+    image: nguyenhuuhoang/kingkong-frontend:latest 
+    ports:
+      - "3000:3000"
+    restart: always
+    environment:
+      - NODE_ENV=production
+
+  backend:
+    image: nguyenhuuhoang/kingkong-backend:latest
+    ports:
+      - "8080:8080"
+    restart: always
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod

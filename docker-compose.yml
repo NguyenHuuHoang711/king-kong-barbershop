@@ -4,12 +4,11 @@ services:
   frontend:
     build:
       context: ./apps/frontend-nextjs
-      dockerfile: Dockerfile
+      dockerfile: /docker/dev.Dockerfile
     ports:
       - "3000:3000"
     environment:
-      - NODE_ENV=production
-
+      - NODE_ENV=development
   backend:
     build:
       context: ./apps/backend-spring
